@@ -1,0 +1,21 @@
+<div class="login-container">
+    <img class="film" src="assets/images/film.png" alt="">
+    <div class="logo">FlixView</div>
+    <div class="desc">FlixView is a cutting-edge movie review app designed to enhance your movie-watching experience. It serves as a one-stop platform where movie enthusiasts can explore, discover, and share their thoughts on the latest films, classics, and everything in between. With its user-friendly interface and comprehensive features, FlixView revolutionizes the way you engage with movies.</div>
+
+    <div class="login-form">
+        <div class="form-group">
+            <label for="uname">UserName</label>
+            <input type="text" name="uname" class="form-control" [(ngModel)]="userDetails.userName" />
+        </div>
+        <div class="form-group">
+            <label for="pswd">Password</label>
+            <input type="password" name="pswd" class="form-control" [(ngModel)]="userDetails.password" />
+        </div>
+        <div class="btn-container">
+            <div class="err">{{ errMsg }}</div>
+            <div class="btn btn-dark" (click)="login()">Login</div>
+        </div>
+    </div>
+</div> 
+  

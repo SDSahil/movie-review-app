@@ -1,0 +1,137 @@
+.home-container {
+    display: flex;
+
+    .all-movies {
+        width: 75%;
+        height: 92vh;
+        // min-height: calc(100vh - 60px);
+        min-height: 92vh;
+        border-right: 1px solid #fdc827;
+        padding: 20px 40px;
+        font-family: "Roboto", sans-serif;
+        overflow-y: auto;
+
+        .top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 5px;
+
+            h5 {
+                text-transform: uppercase;
+                font-weight: bold;
+                border-left: 5px solid #ff9900;
+                padding-left: 10px;
+            }
+
+            .view-all {
+                cursor: pointer;
+                font-weight: bold;
+
+                &:hover {
+                    color: #ff9900;
+                }
+            }
+        }
+
+        .movies-thumbnail {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+            // border: 2px solid red;
+            overflow-x: scroll;
+
+            .movie {
+                margin: 10px;
+
+                .cover {
+                    cursor: pointer;
+
+                    img {
+                        border-radius: 5px;
+                    }
+                }
+
+                .detail {
+                    width: 100%;
+
+                    .name {
+                        font-weight: bold;
+                        height: 50px;
+                        margin-top: 5px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+    .popular-movies {
+        width: 25%;
+        height: 92vh;
+        // min-height: calc(100vh - 60px);
+        min-height: 92vh;
+        padding: 20px 20px;
+        font-family: "Roboto", sans-serif;
+
+        h4 {
+            text-transform: uppercase;
+            font-weight: bold;
+            border-left: 5px solid #ff9900;
+            padding-left: 10px;
+            margin-bottom: 20px;
+        }
+
+        .movies {
+            overflow: auto;
+            height: calc(100% - 110px);
+
+            .movie {
+                margin: 20px 10px 30px 0;
+                // display: flex;
+                // align-items: center;
+                // justify-content: space-between;
+
+                &:first-child {
+                    margin-top: 0;
+                }
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                .name {
+                    font-weight: bold;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #ff9900;
+                    }
+                }
+            }
+
+        }
+
+        .view-all {
+            font-weight: bold;
+            text-align: right;
+            margin-top: 10px;
+            cursor: pointer;
+
+            &:hover {
+                color: #ff9900;
+            }
+        }
+    }
+}
+
+.rating {
+    position: relative;
+
+    .rating-value {
+        position: absolute;
+        top: 10px;
+        right: 2px;
+        font-weight: bold;
+    }
+}
